@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.language-selector {
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.lang-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f0f2f5;
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #050505;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-dropdown:hover {
+    background-color: #e4e6eb;
+}
+
+.brand-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.facebook-logo {
+    margin-bottom: 12px;
+}
+
+.facebook-logo i {
+    font-size: 64px;
+    color: #1877f2;
+}
+
+.facebook-logo .fb-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1877f2;
+    letter-spacing: -0.5px;
+    margin-right: 4px;
+}
+
+.android-promo {
+    background-color: #e7f3ff;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1b74e4;
+    margin-top: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.login-form {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 0 4px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: #f0f2f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #606770;
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 64px 14px 16px;
+    font-size: 16px;
+    border: 1px solid #dddfe2;
+    border-radius: 40px;
+    background-color: #ffffff;
+    outline: none;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.input-group input:focus + .input-icon {
+    background: #e4e6f0;
+    color: #1877f2;
+}
+
+.login-btn {
+    background: #1877f2;
+    border: none;
+    border-radius: 48px;
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin: 8px 0 16px;
+    transition: background 0.2s, opacity 0.2s;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-btn:hover {
+    background: #166fe5;
+}
+
+.login-btn.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.forgot-link {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.forgot-link a {
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 16px 0 20px;
+}
+
+.new-account-btn {
+    background: #42b72a;
+    border-radius: 48px;
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.new-account-btn:hover {
+    background: #36a420l;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    margin: 32px 0 24px;
+}
+
+.quick-links a, .footer-row a {
+    color: #65676b;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.quick-links a:hover, .footer-row a:hover {
+    text-decoration: underline;
+    color: #1877f2;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e4e6eb;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    margin-bottom: 16px;
+}
+
+.copyright {
+    color: #8a8d91;
+    font-size: 12px;
+    margin: 16px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f0f2f5;
+    display: none;
+}
+
+.form-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    display: block;
+}
+
+.form-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: block;
+}
+
+@media (max-width: 450px) {
+    .main-container {
+        padding: 16px 12px 32px;
+    }
+    .facebook-logo i {
+        font-size: 54px;
+    }
+    .facebook-logo .fb-text {
+        font-size: 30px;
+    }
+    .login-btn {
+        font-size: 18px;
+    }
+}
